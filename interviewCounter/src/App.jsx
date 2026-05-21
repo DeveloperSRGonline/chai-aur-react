@@ -6,10 +6,7 @@ const App = () => {
 
   const addValue = () => {
     // ye question hai ki ab kya hoga bina run karen batana hai
-    setCounter(counter + 1)
-    setCounter(counter + 1)
-    setCounter(counter + 1)
-    setCounter(counter + 1)
+    setCounter((prev) => prev + 1)
 
     // yaha kya hota hai mai ek hi kaam ko repeat kar raha hu tooh react batch update ke time ek hi kaam karege only 
   }
