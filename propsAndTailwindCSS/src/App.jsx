@@ -31,7 +31,11 @@ const App = () => {
     }
   return (
     <div className='h-screen w-screen bg-black-950 text-amber-100'>
-      <Card image={myObject.image} name={myObject.name}/>
+      <div className="display: flex flex-col items-center justify-center gap-4">
+        {data.map((item, index) => (
+          <Card key={index} name={item.name} image={item.image} />
+        ))}
+      </div>
     </div>
   )
 }
