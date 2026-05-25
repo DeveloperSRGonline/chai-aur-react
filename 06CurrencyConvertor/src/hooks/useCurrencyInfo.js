@@ -8,7 +8,7 @@ function useCurrencyInfo(currency) {
   useEffect(() => {
     // kar kya raha hai bas ek fetch hi toh karna hai
     // mostly api ka jo data hota hai vo string mein hi hota hai
-    fetch(`https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${currency}.json`)// data ke liye api
+    fetch(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${currency}.json`)// data ke liye api
     .then((res)=>res.json())// data ko string se json mein convert karne ke liye
     .then((res)=>setData(res[currency]))// json data mein se jo currency hai let say inr toh ins ke data ko setData ki madat se data mein set karne ke liye
 
