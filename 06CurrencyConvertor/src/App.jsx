@@ -1,7 +1,4 @@
-
-
 const App = () => {
-
 
   return (
     <div>
