@@ -1,4 +1,7 @@
 // input box hai jo ki do input li raha hai label and className
+
+import { useId } from "react";
+
 // input field mein likhte hi call ho jaye isliye
 function InputBox({
   label,
@@ -11,12 +14,16 @@ function InputBox({
   currencyDisable = false,
   className = "",
 }) {
+    const amountInputId = useId()
+
+
   return (
-    // ${className} is liye taki user kuchh apni style lagana chahta hai toh laga sakta hai
+// ${className} is liye taki user kuchh apni style lagana chahta hai toh laga sakta hai
     <div className={`bg-white p-3 rounded-lg text-sm flex ${className}`}>
       <div className="w-1/2">
-        <label className="text-black/40 mb-2 inline-block">{label}</label>
+        <label htmlFor={amountInputId} className="text-black/40 mb-2 inline-block">{label}</label>
         <input
+          id={amountInputId}
           className="outline-none w-full bg-transparent py-1.5"
           type="number"
           placeholder="Amount"
