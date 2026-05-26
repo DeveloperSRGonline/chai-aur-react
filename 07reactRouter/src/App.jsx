@@ -1,9 +1,13 @@
-import React from 'react'
+import Header from "./components/Header/Header.jsx";
+import Footer from "./components/Footer/Footer.jsx";
+import AppRoutes from "./AppRoutes.jsx";
 
-const App = () => {
+export default function App() {
   return (
-    <div className='text-6xl'>App</div>
-  )
+    <>
+      <Header />
+      <AppRoutes />
+      <Footer />
+    </>
+  );
 }
-
-export default App
