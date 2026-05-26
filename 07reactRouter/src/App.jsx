@@ -1,12 +1,12 @@
 import Header from "./components/Header/Header.jsx";
 import Footer from "./components/Footer/Footer.jsx";
-import AppRoutes from "./AppRoutes.jsx";
+import { Outlet } from "react-router-dom";
 
 export default function App() {
   return (
     <>
       <Header />
-      <AppRoutes />
+      <Outlet />
       <Footer />
     </>
   );
