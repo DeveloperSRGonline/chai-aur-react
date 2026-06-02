@@ -12,7 +12,6 @@ const Todos = () => {
         {todos.map((todo) => (
           <li key={todo.id} className="todo-item">
             <span className="todo-text">{todo.text}</span>
-
             <button
               className="delete-btn"
               onClick={() => dispatch(removeTodo(todo.id))}
