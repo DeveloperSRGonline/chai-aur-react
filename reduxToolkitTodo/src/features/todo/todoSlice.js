@@ -24,7 +24,7 @@ export const todoSlice = createSlice({
       state.todos.push(todo)
     },
     removeTodo: (state, action) => {
-      // Yahan naya todo delete karne ka logic
+      state.todos = state.todos.filter(todo => todo.id !== action.payload)
     },
   },
 });
