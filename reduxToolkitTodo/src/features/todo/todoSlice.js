@@ -28,3 +28,9 @@ export const todoSlice = createSlice({
     },
   },
 });
+
+// individually functionalities ko use karne ke liye
+export const {addTodo,removeTodo} = todoSlice.actions
+
+// reducer export for store because only reducer can update anything in store
+export default todoSlice.reducer
