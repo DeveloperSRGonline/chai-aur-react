@@ -16,7 +16,12 @@ export const todoSlice = createSlice({
   reducers: {
     // state = purana data, action = jo naya data aaya hai (payload)
     addTodo: (state, action) => {
-      // Yahan naya todo add karne ka logic
+        // 
+      const todo = {
+        id:nanoid(),
+        text:action.payload
+      }
+      state.todos.push(todo)
     },
     removeTodo: (state, action) => {
       // Yahan naya todo delete karne ka logic
