@@ -34,3 +34,15 @@ export const {addTodo,removeTodo} = todoSlice.actions
 
 // reducer export for store because only reducer can update anything in store
 export default todoSlice.reducer
+
+
+// ***************** understanding purpose ***************************
+// Redux Toolkit internally aisa ek object banata hai:
+// todoSlice = {
+//     name: 'todo',
+//     reducer: (state, action) => { ... }, // Main reducer function
+//     actions: {
+//         addTodo: (payload) => { return { type: 'todo/addTodo', payload: payload } },
+//         removeTodo: (payload) => { return { type: 'todo/removeTodo', payload: payload } }
+//     }
+// }
