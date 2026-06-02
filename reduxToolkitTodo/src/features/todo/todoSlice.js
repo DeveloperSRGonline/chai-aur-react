@@ -1,0 +1,25 @@
+import { createSlice, nanoid } from "@reduxjs/toolkit";
+
+// Initial state ka kaam hi yahi hai ki aap pehle se fix kar dete ho ki data ka type kya hoga aur uski starting value kya hogi.
+const initialState = {
+  todos: [
+    {
+      id: 1,
+      text: "Hello World",
+    },
+  ],
+};
+
+export const todoSlice = createSlice({
+  name: "todo",
+  initialState,
+  reducers: {
+    // state = purana data, action = jo naya data aaya hai (payload)
+    addTodo: (state, action) => {
+      // Yahan naya todo add karne ka logic
+    },
+    removeTodo: (state, action) => {
+      // Yahan naya todo delete karne ka logic
+    },
+  },
+});
