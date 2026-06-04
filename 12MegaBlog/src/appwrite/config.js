@@ -53,6 +53,22 @@ export class Service{
             throw error;
         }
     }
+
+    async deletePost(slug){
+        try {
+            await this.TablesDB.deleteRow({
+                databaseId:appwriteConfig.appwriteDatabaseId,
+                collectionId:appwriteConfig.appwriteCollectionId,
+                documentId:slug
+            })
+            return true;
+        } catch (error) {
+            console.log("Appwrite service :: deletePost :: error", error);
+            return false;
+        }
+    }
+
+    
 }
 
 
