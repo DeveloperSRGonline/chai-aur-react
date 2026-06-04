@@ -20,8 +20,8 @@ export class Service{
         try {
             return await this.TablesDB.createRow({
                 databaseId: appwriteConfig.appwriteDatabaseId,
-                collectionId: appwriteConfig.appwriteCollectionId,
-                documentId: slug,
+                tableId: appwriteConfig.appwriteCollectionId,
+                rowId: slug,
                 data: {
                     title,
                     content,
@@ -40,8 +40,8 @@ export class Service{
         try {
             return await this.TablesDB.updateRow({
                 databaseId:appwriteConfig.appwriteDatabaseId,
-                collectionId:appwriteConfig.appwriteCollectionId,
-                documentId:slug,
+                tableId:appwriteConfig.appwriteCollectionId,
+                rowId:slug,
                 data:{
                     title,
                     content,
@@ -58,8 +58,8 @@ export class Service{
         try {
             await this.TablesDB.deleteRow({
                 databaseId:appwriteConfig.appwriteDatabaseId,
-                collectionId:appwriteConfig.appwriteCollectionId,
-                documentId:slug
+                tableId:appwriteConfig.appwriteCollectionId,
+                rowId:slug
             })
             return true;
         } catch (error) {
@@ -72,7 +72,7 @@ export class Service{
         try {
             return await this.TablesDB.getRow({
                 databaseId:appwriteConfig.appwriteDatabaseId,
-                collectionId:appwriteConfig.appwriteCollectionId,
+                tableId:appwriteConfig.appwriteCollectionId,
                 documentId:slug
             })
         } catch (error) {
