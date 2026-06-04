@@ -80,6 +80,19 @@ export class Service{
             return false;
         }
     }
+
+    async getPosts({queries = [Query.equal("status","active")]}){
+        try {
+            return await this.TablesDB.listRows({
+                databaseId:appwriteConfig.appwriteDatabaseId,
+                tableId:appwriteConfig.appwriteCollectionId,
+                queries:queries
+            })
+        } catch (error) {
+            console.log("Appwrite service :: getPosts :: error", error);
+            return false;
+        }
+    }
 }
 
 
