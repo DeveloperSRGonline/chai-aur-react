@@ -120,6 +120,19 @@ export class Service{
             return false;
         }
     }
+
+    // file preview
+    async previewFile(fileId){
+        try {
+            return this.storage.getFilePreview({
+                bucketId:appwriteConfig.appwriteBucketId,
+                fileId:fileId
+            })
+        } catch (error) {
+            console.log("Appwrite service :: previewFile :: error", error);
+            return false;
+        }
+    }
 }
 
 
