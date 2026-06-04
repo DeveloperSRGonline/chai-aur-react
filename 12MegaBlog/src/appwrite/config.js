@@ -35,6 +35,24 @@ export class Service{
             
         }
     }
+
+    async updatePost(slug,{title,content,featuredImage,status}){
+        try {
+            return await this.TablesDB.updateRow({
+                databaseId:appwriteConfig.appwriteDatabaseId,
+                collectionId:appwriteConfig.appwriteCollectionId,
+                documentId:slug,
+                data:{
+                    title,
+                    content,
+                    featuredImage,
+                    status
+                }
+            })
+        } catch (error) {
+            throw error;
+        }
+    }
 }
 
 
