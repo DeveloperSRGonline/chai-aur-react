@@ -68,7 +68,18 @@ export class Service{
         }
     }
 
-    
+    async getPost(slug){
+        try {
+            return await this.TablesDB.getRow({
+                databaseId:appwriteConfig.appwriteDatabaseId,
+                collectionId:appwriteConfig.appwriteCollectionId,
+                documentId:slug
+            })
+        } catch (error) {
+            console.log("Appwrite service :: getPost :: error", error);
+            return false;
+        }
+    }
 }
 
 
