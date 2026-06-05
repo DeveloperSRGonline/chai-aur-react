@@ -2,8 +2,7 @@ import { useEffect, useState } from "react"
 import { useDispatch } from "react-redux"
 import authService from "./appwrite/auth.service"
 import { login, logout } from "./store/authSlice"
-import Header from "./components/Header/Header"
-import Footer from "./components/Footer/Footer"
+import { Header, Footer } from "./components/index"
 import "./App.css"
 
 const App = () => {
@@ -29,7 +28,6 @@ const App = () => {
           <div>
             <Header />
             <main>
-              
             </main>
             <Footer />
           </div>
