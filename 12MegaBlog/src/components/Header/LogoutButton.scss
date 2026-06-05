@@ -1,0 +1,11 @@
+.logout-btn {
+  display: inline-block;
+  padding: 8px 24px; /* py-2 px-6 */
+  border-radius: 9999px; /* rounded-full */
+  transition: all 0.2s ease; /* duration-200 */
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #dbeafe; /* blue-100 */
+}
