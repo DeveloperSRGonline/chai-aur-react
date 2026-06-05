@@ -1,0 +1,19 @@
+.select-div {
+    width: 100%;
+
+    .select {
+        background-color: white;
+        color: black;
+        outline: none;
+        transition: all 0.2s;
+        border: 1px solid #e5e7eb;
+        padding: 0.75rem 1rem;
+        border-radius: 0.5rem;
+        width: 100%;
+
+        &:focus {
+            background-color: #f9fafb;
+            border-color: #d1d5db;
+        }
+    }
+}
