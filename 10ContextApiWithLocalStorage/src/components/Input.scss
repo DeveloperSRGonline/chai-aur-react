@@ -1,0 +1,25 @@
+.input-div {
+    width: 100%;
+
+    .input-label {
+        display: inline-block;
+        margin-bottom: 1rem;
+        padding-left: 1rem;
+    }
+
+    .input-field {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        border-radius: 0.5rem;
+        background-color: white;
+        color: black;
+        outline: none;
+        transition-duration: 200ms;
+        border: 1px solid #ccc;
+        width: 100%;
+
+        &:focus {
+            background-color: #f5f5f5;
+        }
+    }
+}
