@@ -1,0 +1,30 @@
+.header{
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f5f5f5;
+
+    .nav {
+        display: flex;
+
+        .logo-div {
+            margin-right: 4rem;
+        }
+
+        ul{
+            display: flex;
+            margin-left: auto;
+
+            .link-btn{
+                display: inline-block;
+                padding: 0.5rem 1.5rem;
+                transition-duration: 200ms;
+                background-color: rgba(0, 0, 255, 0.1);
+                border-radius: 9999px;
+
+                &:hover {
+                    background-color: rgba(0, 0, 255, 0.2);
+                }
+            }
+        }
+    }
+}
