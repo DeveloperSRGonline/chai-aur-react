@@ -1,0 +1,36 @@
+.post-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.post-card {
+  width: 100%;
+  background-color: #f3f4f6; // gray-100
+  border-radius: 12px;
+  padding: 16px;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+
+  &__image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  &__image {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    display: block;
+  }
+
+  &__title {
+    font-size: 1.25rem; // text-xl
+    font-weight: 700;   // font-bold
+    margin: 0;
+  }
+}
