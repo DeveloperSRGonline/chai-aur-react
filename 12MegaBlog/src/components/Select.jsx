@@ -3,7 +3,7 @@ import { useId, forwardRef } from "react"
 const Select = ({
     options,
     label,
-    className="",
+    className = "",
     ...props
 }, ref) => {
 
@@ -11,15 +11,15 @@ const Select = ({
     return (
         <div className="select-div">
             {label && <label htmlFor={id} className={className || ""}>{label}</label>}
-            <select 
-            {...props}
-            id={id}
-            ref={ref}
-            className={`${className} select`}
+            <select
+                {...props}
+                id={id}
+                ref={ref}
+                className={`${className} select`}
             >
-                {options?options.map((option) => (
+                {options ? options.map((option) => (
                     <option key={option} value={option}>{option}</option>
-                )): null}
+                )) : null}
             </select>
         </div>
     )
