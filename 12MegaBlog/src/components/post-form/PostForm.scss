@@ -1,0 +1,28 @@
+.post-form {
+  display: flex;
+  flex-wrap: wrap;
+
+  .post-form__left-section {
+    width: 66.666%;
+    padding: 0 0.5rem;
+  }
+
+  .post-form__right-section {
+    width: 33.333%;
+    padding: 0 0.5rem;
+  }
+
+  .post-form__input-group {
+    margin-bottom: 1rem;
+  }
+
+  .post-form__image-preview {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+  }
+
+  .post-form__submit-btn {
+    width: 100%;
+  }
+}
